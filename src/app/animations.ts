@@ -42,8 +42,22 @@ export const Content = (open: boolean) =>
     opacity: open ? layout.content.opacity.max : layout.content.opacity.min,
   });
 
+  export const MovieCategory = (open: boolean) =>
+  useSpring({
+    config: { friction: layout.friction },
+    fontSize: open ? '30px' : '15px',
+    opacity: open ? 0.4 : 1
+  });
+
   export const MovieTitle = (open: boolean) =>
   useSpring({
     config: { friction: layout.friction },
-    fontSize: open ? '30px' : '40px'
+    fontSize: open ? '30px' : '40px',
+    opacity: open ? 0.4 : 1
+  });
+
+  export const MovieMeta = (open: boolean) =>
+  useSpring({
+    config: { friction: layout.friction },
+    opacity: open ? 0.2 : 1
   });

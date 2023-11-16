@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { animated as a } from "react-spring";
-import { Header, Body, Content, MovieTitle } from "./animations";
+import { Header, Body, Content, MovieTitle, MovieMeta, MovieCategory } from "./animations";
 
 export default function Home() {
   const [open, toggle] = useState(false);
@@ -19,9 +19,9 @@ export default function Home() {
         className={`flex justify-center text-center flex-col text-white bg-gray-900`}
         style={Body(open)}
       >
-        <p className="mb-6 -top-6 text-white/50">DESSIN ANIME</p>
+        <a.p className="mb-6 -top-6 text-white/50" style={MovieCategory(open)}>Dessin animé</a.p>
         <a.h1 className={`text-4xl mb-3`} style={MovieTitle(open)}>Le Livre de la Jungle</a.h1>
-        <p className="text-white">1967 ‧ Enfants/Animation ‧ 1h 29m</p>
+        <a.p className="text-white" style={MovieMeta(open)}>1967 ‧ Enfants/Animation ‧ 1h 29m</a.p>
         <div className="text-justify max-w-3xl mx-auto">
           <a.p className={`mt-6`} style={Content(open)}>
             Le retour dans la jungle du tigre Shere Khan inquiète les loups. Le
@@ -34,7 +34,7 @@ export default function Home() {
           </a.p>
         </div>
         <button
-          className="bg-[#3C2075] hover:bg-[#3C2075]/80 transition fixed mx-auto left-1/2 bottom-5 w-38 h-14 text-white outline-none uppercase pl-6 pr-6 rounded-md border border-white border-1 translate-x-[-50%]"
+          className="bg-[#6c5ce7] hover:bg-[#6c5ce7]/60 transition fixed mx-auto left-1/2 bottom-12 w-38 h-14 text-white outline-none uppercase pl-6 pr-6 rounded-md border border-white border-1 translate-x-[-50%]"
           onClick={() => toggle(!open)}
         >
           Explorer
