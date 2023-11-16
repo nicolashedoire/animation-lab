@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { animated as a } from "react-spring";
-import { Header, Body, Content } from "./animations";
+import { Header, Body, Content, MovieTitle } from "./animations";
 
 export default function Home() {
   const [open, toggle] = useState(false);
@@ -20,7 +20,7 @@ export default function Home() {
         style={Body(open)}
       >
         <p className="mb-6 -top-6 text-white/50">DESSIN ANIME</p>
-        <h1 className={`text-4xl mb-3`}>Le Livre de la Jungle</h1>
+        <a.h1 className={`text-4xl mb-3`} style={MovieTitle(open)}>Le Livre de la Jungle</a.h1>
         <p className="text-white">1967 ‧ Enfants/Animation ‧ 1h 29m</p>
         <div className="text-justify max-w-3xl mx-auto">
           <a.p className={`mt-6`} style={Content(open)}>
